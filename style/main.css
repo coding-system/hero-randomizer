@@ -18,11 +18,30 @@
    /* mix-blend-mode: difference; */
 }
 
+/* .wrapper::before {
+   position: absolute;
+   top: 0;
+   content: 'Special for RadiKa1fa';
+   font-size: 10px;
+   font-variation-settings: "wght" 300;
+   color: #fff;
+   mix-blend-mode: difference;
+} */
+
 .main-title {
    font-size: 110px;
    font-variation-settings: "wght" 800;
    color: #aaaa96;
    text-shadow: 2px 2px 0 #fff;
+}
+
+.main-title::before {
+   position: absolute;
+   content: "version 1.0";
+   font-size: 16px;
+   text-shadow: 1px 1px 0 #fff;
+   top: -2px;
+   right: -75px;
 }
 
 .main-title {
@@ -81,7 +100,7 @@
 } */
 
 .hero-image {
-   background-image: url(../images/abaddon.png);
+   background-image: url(../images/alchemist.png);
    background-repeat: no-repeat;
    background-size: cover;
    object-fit: cover;
@@ -92,7 +111,7 @@
    border-radius: 14px;
    border: 2px solid #000000;
    transition: all 0.3s ease;
-   filter: grayscale(1);
+   filter: grayscale(0);
    text-transform: uppercase;
    font-size: 28px;
 }
@@ -104,8 +123,6 @@
    top: 0;
    left: 5px;
    color: #fff;
-
-   mix-blend-mode: difference;
 }
 
 .hero-image::after {
@@ -115,8 +132,6 @@
    top: 0;
    right: 5px;
    color: #fff;
-
-   mix-blend-mode: difference;
 }
 
 .hero-image:hover {
