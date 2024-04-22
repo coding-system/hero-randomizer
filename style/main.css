@@ -1,0 +1,165 @@
+::selection {
+   background-color: #fff;
+   color: #000;
+   text-shadow: none;
+}
+
+.wrapper {
+   background-image: linear-gradient(#42425e, #bbbbbb);
+   height: 100vh;
+   font-family: "Inter-Variable";
+   font-size: 34px;
+   font-variation-settings: "wght" 400;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 40px;
+   /* mix-blend-mode: difference; */
+}
+
+.main-title {
+   font-size: 110px;
+   font-variation-settings: "wght" 800;
+   color: #aaaa96;
+   text-shadow: 2px 2px 0 #fff;
+}
+
+.main-title {
+   animation-name: selected;
+   animation-duration: 0.6s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in-out;
+   animation-direction: alternate;
+}
+
+@keyframes selected {
+   0% {
+      scale: 1;
+   }
+
+   100% {
+      scale: 1.05;
+   }
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.hero {
+   margin-top: 65px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 0px;
+   width: 355px;
+   position: relative;
+}
+
+.hero-title {
+   font-family: "Trajanpro";
+   font-weight: 400;
+   text-shadow: 0 2px 1px #000;
+   font-size: 28px;
+   font-variation-settings: "wght" 600;
+   color: #ffffff;
+   text-transform: uppercase;
+   transition: all 0.3s ease;
+}
+
+/* .hero-chosen {
+   margin-top: 50px;
+   font-size: 28px;
+   color: #ffffff;
+   font-variation-settings: "wght" 400;
+   text-transform: uppercase;
+} */
+
+.hero-image {
+   background-image: url(../images/abaddon.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   object-fit: cover;
+   object-position: center;
+   margin-top: 10px;
+   width: 96%;
+   height: 190px;
+   border-radius: 14px;
+   border: 2px solid #000000;
+   transition: all 0.3s ease;
+   filter: grayscale(1);
+   text-transform: uppercase;
+   font-size: 28px;
+}
+
+.hero-image::before {
+   content: "1";
+   font-family: "Trajanpro";
+   position: absolute;
+   top: 0;
+   left: 5px;
+   color: #fff;
+
+   mix-blend-mode: difference;
+}
+
+.hero-image::after {
+   content: "Abaddon";
+   font-family: "Trajanpro";
+   position: absolute;
+   top: 0;
+   right: 5px;
+   color: #fff;
+
+   mix-blend-mode: difference;
+}
+
+.hero-image:hover {
+   scale: 1.1;
+   filter: grayscale(0);
+   border: 2px solid #ffffff;
+}
+
+.content:has(.hero-image:hover) .hero-title {
+   translate: 0 40px;
+   scale: 0.6;
+}
+
+.choose-button {
+   position: relative;
+   margin-top: 20px;
+   font-weight: 400;
+   background-color: transparent;
+   color: #000;
+   border: 2px solid #000;
+   border-radius: 14px;
+   height: 55px;
+   width: 96%;
+   font-size: 35px;
+   /* mix-blend-mode: difference; */
+   scale: 1;
+   transition: all 0.3s ease;
+   font-variation-settings: "wght" 400;
+   z-index: 2;
+}
+
+.choose-button:hover {
+   cursor: pointer;
+   scale: 1.05;
+   translate: 0 -3px;
+   font-variation-settings: "wght" 500;
+   background-color: #000000;
+   color: #ffffff;
+   /* height: 58px; */
+}
+
+.choose-button:active {
+   font-variation-settings: "wght" 800;
+   background-color: #fff;
+   color: #000;
+}
