@@ -200,7 +200,7 @@ let heroInfo = {
       "./images/magnataur.png",
       "./images/marci.png",
       "./images/mars.png",
-      "./images/medusa.pngv",
+      "./images/medusa.png",
       "./images/meepo.png",
       "./images/mirana.png",
       "./images/monkey_king.png",
