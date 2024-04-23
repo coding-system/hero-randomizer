@@ -51,7 +51,6 @@
    left: 242px;
    width: 45px;
    z-index: -1;
-
 }
 
 .main-title {
@@ -159,7 +158,7 @@
 .hero-image::before {
    transition: all 0.2s ease;
    position: absolute;
-   content: '';
+   content: "";
    top: 0;
    left: 0;
    width: 100%;
@@ -167,22 +166,22 @@
    border-radius: 12px;
    /* border: 2px solid #000000; */
    background-image: repeating-linear-gradient(
-      #d3d3d3,
-      #d3d3d3 2px,
-      transparent 2px,
-      transparent 4px
-   ),
-   repeating-linear-gradient(
-      90deg,
-      #ffffff,
-      #ffffff 2px,
-      transparent 2px,  
-      transparent 4px
-   ),
-   linear-gradient(#e7e7e7, #474747);;
+         #d3d3d3,
+         #d3d3d3 2px,
+         transparent 2px,
+         transparent 4px
+      ),
+      repeating-linear-gradient(
+         90deg,
+         #ffffff,
+         #ffffff 2px,
+         transparent 2px,
+         transparent 4px
+      ),
+      linear-gradient(#e7e7e7, #474747);
    background-position: center;
    background-repeat: no-repeat;
-   background-size: auto ;
+   background-size: auto;
    z-index: 2;
    opacity: 1;
 }

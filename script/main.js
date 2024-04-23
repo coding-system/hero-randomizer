@@ -323,10 +323,6 @@ function heroesRandomer() {
       `style`,
       `background-image: url(${heroInfo.image[randId]})`
    );
-   markers.setAttribute(
-      `style`,
-      `background-image: url(${heroInfo.image[randId]})`
-   );
    console.log("Ваш герой " + heroInfo.name[randId] + " под номером " + randId);
 }
 
