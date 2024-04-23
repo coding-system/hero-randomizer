@@ -258,3 +258,21 @@
    bottom: 20px;
    right: 20px;
 }
+
+@media (524px >= width) {
+   .main-title {
+      font-size: 65px;
+   }
+
+   .main-title::before {
+      font-size: 8px;
+      top: 0;
+      right: -40px;
+   }
+
+   .lysina {
+      top: -10px;
+      left: 182px;
+      width: 38px;
+   }
+}
