@@ -35,14 +35,14 @@
    text-shadow: 2px 2px 0 #fff;
 }
 
-.main-title::before {
+/* .main-title::before {
    position: absolute;
    content: "version 0.1";
    font-size: 16px;
    text-shadow: 1px 1px 0 #fff;
    top: -2px;
    right: -75px;
-}
+} */
 
 .lysina {
    mix-blend-mode: normal;
@@ -253,10 +253,10 @@
 .powered {
    font-family: "Inter-Variable";
    font-variation-settings: "wght" 200;
-   font-size: 20px;
+   font-size: 12px;
    position: absolute;
-   bottom: 20px;
-   right: 20px;
+   bottom: 5px;
+   right: 5px;
 }
 
 @media (524px >= width) {
