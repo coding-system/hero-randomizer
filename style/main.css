@@ -251,7 +251,7 @@
 }
 
 .powered {
-   ffont-family: "Inter-Variable";
+   font-family: "Inter-Variable";
    font-variation-settings: "wght" 200;
    font-size: 20px;
    position: absolute;
