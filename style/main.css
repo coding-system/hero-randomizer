@@ -45,7 +45,7 @@
 }
 
 .lysina {
-   background-image: url('../images/icons/lysina.png');
+   background-image: url("../images/icons/lysina.png");
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -61,28 +61,38 @@
 
 .lysina {
    animation-name: lysinarunning;
-   animation-duration: 18s;
+   animation-duration: 8s;
    animation-iteration-count: infinite;
-   animation-timing-function: ease
+   animation-timing-function: linear;
    animation-direction: normal;
 }
 
 @keyframes lysinarunning {
    0% {
-      translate: 10vw -10vh;
+      translate: 20vw -20vh;
+      scale: 2;
+      rotate: 320deg;
    }
    25% {
-      translate: 90vw -10vh;
+      translate: 80vw -20vh;
+      scale: 2;
+      rotate: 720deg;
    }
 
    50% {
-      translate: 90vw -90vh;
+      translate: 80vw -80vh;
+      scale: 0.5;
+      rotate: 1440deg;
    }
    75% {
-      translate: 10vw -90vh;
+      translate: 20vw -80vh;
+      scale: 0.5;
+      rotate: 2880deg;
    }
    100% {
-      translate: 10vw -10vh;
+      translate: 20vw -20vh;
+      scale: 2;
+      rotate: 5720deg;
    }
 }
 
@@ -91,11 +101,11 @@
    font-variation-settings: "wght" 400;
    box-shadow: -2px 2px 5px #000;
 
-   font-size: 14px;
+   font-size: 12px;
    position: absolute;
    bottom: 30px;
    right: 36px;
-   padding: 10px;
+   padding: 5px;
    background-color: #fff;
    border-radius: 14px;
    border: 2px solid #000;
@@ -418,7 +428,6 @@
    font-family: "Inter-Variable";
    font-variation-settings: "wght" 300;
    font-size: 12px;
-   
 }
 
 @media (524px >= width) {
@@ -430,6 +439,10 @@
       font-size: 8px;
       top: 0;
       right: -40px;
+      display: none;
+   }
+
+   .lysina {
       display: none;
    }
 }
