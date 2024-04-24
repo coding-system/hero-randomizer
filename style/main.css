@@ -183,7 +183,8 @@
          #222222 5px,
          transparent 5px,
          transparent 10px
-      );
+      ),
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
    background-position: center;
    background-repeat: no-repeat;
    background-size: auto;
