@@ -456,7 +456,7 @@
    /* background-color: #fff; */
    /* display: none; */
    position: absolute;
-   top:  3vh;
+   top: 3vh;
    right: 6vw;
    z-index: 777;
    width: 40px;
@@ -480,66 +480,69 @@
 
 .raketa {
    animation-name: lysinarunning;
-   animation-duration: 9s;
+   animation-duration: 7s;
    animation-iteration-count: 1;
    animation-timing-function: linear;
    animation-direction: normal;
    /* animation-delay: 1s; */
 }
 
-@keyframes lysinarunning {
+/* @keyframes lysinarunning {
    0% {
       translate: 20vw -20vh;
-      scale: 3;
+      scale: 2;
       rotate: -45deg;
 
    }
    25% {
-      
-      scale: 3;
       rotate: -45deg;
-
-   }
-   30% {
-      scale: 3;
-      
-      rotate: -35deg;
-
    }
 
    35% {
-      scale: 3;
-      
-      rotate: -25deg;
-
+      rotate: 0deg;
    }
 
-   40% {
-      scale: 3;
-      
-      
-
-   }
-   45% {
+   50% {
       translate: 20vw -50vh;
-      scale: 3;
+      scale: 4;
       rotate: 385deg;
 
    }
 
-   50% {
+   65% {
       scale: 3;
-      rotate: 375deg;
-
    }
    75% {
       scale: 2;
       rotate: 385deg;
 
    }
+
    100% {
       translate: 90vw -90vh;
       scale: 0;
       rotate: 375deg;
+   }
+} */
+
+@keyframes lysinarunning {
+   0% {
+      translate: 0 0;
+      scale: 2;
+      rotate: 12deg;
+   }
+
+   30% {
+      scale: 4;
+   }
+
+   60% {
+      scale: 3;
+   }
+
+   100% {
+      translate: 90vw -90vh;
+      scale: 0;
+      rotate: 12deg;
    }
 }

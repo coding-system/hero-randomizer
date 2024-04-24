@@ -59,7 +59,7 @@ let heroInfo = {
       "Lone Druid",
       "Luna",
       "Lycan",
-      "Magnataur",
+      "Magnus",
       "Marci",
       "Mars",
       "Medusa.",
