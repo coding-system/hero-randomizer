@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-   background-image: linear-gradient(#42425e, #bbbbbb);
+   background-image: linear-gradient(#20202e, #bbbbbb);
    height: 100vh;
    font-family: "Inter-Variable";
    font-size: 34px;
@@ -18,21 +18,13 @@
    /* mix-blend-mode: difference; */
 }
 
-/* .wrapper::before {
-   position: absolute;
-   top: 0;
-   content: 'Special for RadiKa1fa';
-   font-size: 10px;
-   font-variation-settings: "wght" 300;
-   color: #fff;
-   mix-blend-mode: difference;
-} */
-
 .main-title {
    font-size: 85px;
    font-variation-settings: "wght" 800;
-   color: #9e9696;
-   text-shadow: 2px 2px 0 #fff;
+   /* color: #9e9696; */
+   color: #fff;
+   text-shadow: 2px 2px 0 #747474;
+   mix-blend-mode: difference;
 }
 
 /* .main-title::before {
@@ -44,21 +36,22 @@
    right: -75px;
 } */
 
-.lysina {
-   mix-blend-mode: normal;
-   position: absolute;
-   top: -6px;
-   left: 242px;
-   width: 45px;
-   z-index: -1;
-}
-
 .main-title {
    animation-name: selected;
    animation-duration: 0.6s;
    animation-iteration-count: infinite;
    animation-timing-function: ease-in-out;
    animation-direction: alternate;
+}
+
+.lysina {
+   display: none;
+   mix-blend-mode: normal;
+   position: absolute;
+   top: -6px;
+   left: 242px;
+   width: 45px;
+   z-index: -1;
 }
 
 @keyframes selected {
@@ -112,16 +105,25 @@
    transition: all 0.1s ease;
 } */
 
-.hero-title {
-   font-family: "Trajanpro";
-   font-weight: 400;
-   text-shadow: 0 2px 1px #000;
-   font-size: 55px;
+.last-hero {
+   text-transform: lowercase;
+   letter-spacing: 0.3px;
    font-variation-settings: "wght" 600;
-   color: #ffffff;
-   text-transform: uppercase;
+   font-size: 28px;
+   color: #fff;
    transition: all 0.2s ease;
-   top: 80px;
+   mix-blend-mode: difference;
+}
+
+.hero-title {
+   font-family: "Inter-Variable";
+   font-weight: 400;
+   font-size: 46px;
+   font-variation-settings: "wght" 600;
+   text-align: center;
+   color: #fff;
+   text-transform: uppercase;
+   transition: all 0.1s ease;
    position: absolute;
    z-index: 5;
    pointer-events: none;
@@ -129,7 +131,7 @@
 }
 
 .hero-title {
-   animation-name: selected;
+   /* animation-name: selected; */
    animation-duration: 0.7s;
    animation-iteration-count: infinite;
    animation-timing-function: ease-in-out;
@@ -137,6 +139,9 @@
 }
 
 .hero-image {
+   display: flex;
+   align-items: center;
+   justify-content: center;
    background-image: url(../images/alchemist.png);
    background-repeat: no-repeat;
    background-size: cover;
@@ -147,7 +152,7 @@
    border-radius: 14px;
    border: 2px solid #000000;
    transition: all 0.2s ease;
-   /* filter: grayscale(1); */
+   filter: grayscale(1);
    text-transform: uppercase;
    font-size: 28px;
    position: relative;
@@ -166,24 +171,46 @@
    border-radius: 12px;
    /* border: 2px solid #000000; */
    background-image: repeating-linear-gradient(
-         #d3d3d3,
-         #d3d3d3 2px,
-         transparent 2px,
-         transparent 4px
+         90deg,
+         #353535,
+         #353535 5px,
+         transparent 5px,
+         transparent 10px
       ),
       repeating-linear-gradient(
-         90deg,
-         #ffffff,
-         #ffffff 2px,
-         transparent 2px,
-         transparent 4px
-      ),
-      linear-gradient(#e7e7e7, #474747);
+         0deg,
+         #222222,
+         #222222 5px,
+         transparent 5px,
+         transparent 10px
+      );
    background-position: center;
    background-repeat: no-repeat;
    background-size: auto;
    z-index: 2;
    opacity: 1;
+}
+
+.hero-id {
+   display: none;
+   color: #fff;
+   position: absolute;
+   top: 5px;
+   left: 10px;
+}
+
+.hero-name {
+   display: none;
+   color: #fff;
+   position: absolute;
+   top: 12px;
+   opacity: 0.5;
+   background-color: #000;
+   width: 100%;
+   height: 50px;
+   text-align: end;
+   margin: 0 auto;
+   padding: 0 10px;
 }
 
 .overlay {
@@ -212,11 +239,17 @@
    opacity: 0;
 }
 
+.content:has(.hero-image:hover) .last-hero {
+   scale: 0.6;
+   translate: 0 50px;
+   /* opacity: 0; */
+}
+
 .content:has(.hero-image:hover) .hero-image::before {
    opacity: 0;
 }
 
-.choose-button {
+.button {
    text-transform: uppercase;
    position: relative;
    margin-top: 20px;
@@ -234,7 +267,7 @@
    font-variation-settings: "wght" 400;
 }
 
-.choose-button:hover {
+.button:hover {
    cursor: pointer;
    scale: 1.05;
    translate: 0 -3px;
@@ -244,10 +277,67 @@
    /* height: 58px; */
 }
 
-.choose-button:active {
+.button:active {
    font-variation-settings: "wght" 800;
    background-color: #fff;
    color: #000;
+}
+
+.heroes-list__button {
+   /* display: none; */
+}
+
+.dialog {
+   max-width: 490px;
+   border-radius: 14px;
+   border: 4px #000 solid;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   justify-content: space-between;
+   transition: 0.3s ease;
+   translate: 0px;
+   opacity: 1;
+}
+
+.dialog::backdrop {
+   background-color: #000;
+   opacity: 0.75;
+}
+
+.dialog:not([open]) {
+   pointer-events: none;
+   padding: 0;
+   border: 0;
+   gap: 0;
+   opacity: 0;
+   translate: 0 900px;
+}
+
+.heroes-list {
+   width: 355px;
+}
+
+.dialog__text {
+   opacity: 1;
+   transition: all 1.5s ease;
+   transition-delay: 0.8s;
+}
+
+.dialog:not(.dialog:not([open])) .dialog__text {
+   opacity: 0;
+}
+
+.dialog__text__special {
+   position: absolute;
+   top: 34px;
+   opacity: 0;
+   transition: all 1.5s ease;
+   transition-delay: 1.5s;
+}
+
+.dialog:not(.dialog:not([open])) .dialog__text__special {
+   opacity: 1;
 }
 
 .powered {

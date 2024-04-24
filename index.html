@@ -20,12 +20,40 @@
          </h1>
          <div class="content">
             <div class="hero">
-               <h2 class="hero-title">Ваш герой</h2>
+               <div class="last-hero">roll</div>
+               
 
-               <div class="hero-image markers"></div>
+               <div class="hero-image">
+                  <h2 class="hero-title">Наведи, <br>чтобы <br>посмотреть</h2>
+                  <div class="hero-id">1</div>
+                  <div class="hero-name">Abaddon</div>
+               </div>
             </div>
-            <button class="choose-button">Your turn to pick</button>
+            <button class="button choose-button">Выбрать</button>
          </div>
+         <div class="heroes-list">
+            <button
+               class="button heroes-list__button"
+               type="button"
+               onclick="window['dialog-id'].showModal();"
+               aria-controls="dialog-id"
+            >
+               Список героев
+            </button>
+         </div>
+         <dialog id="dialog-id" class="dialog">
+            <form method="dialog" class="dialog__message">
+               <p class="dialog__text">Здесь будет дополинтельный функционал<br></p>
+               <p class="dialog__text__special">А пока его тут нет, не тыкай на кнопку лишний раз<br></p>
+            </form>
+            <button
+               class="button dialog__button"
+               type="button"
+               onclick="window['dialog-id'].close()"
+            >
+            😢
+            </button>
+         </dialog>
          <div class="footer">
             <p class="powered">Powered by Coding System LLC</p>
          </div>
