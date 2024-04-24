@@ -45,25 +45,57 @@
 }
 
 .lysina {
-   display: none;
+   background-image: url('../images/icons/lysina.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   /* background-color: #fff; */
+   /* display: none; */
    position: absolute;
    bottom: 0px;
    left: 0px;
    z-index: 777;
+   width: 40px;
+   height: 50px;
 }
 
-.lysina:active::before {
-   content: "Здарова!";
+.lysina {
+   animation-name: lysinarunning;
+   animation-duration: 18s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease
+   animation-direction: normal;
+}
+
+@keyframes lysinarunning {
+   0% {
+      translate: 10vw -10vh;
+   }
+   25% {
+      translate: 90vw -10vh;
+   }
+
+   50% {
+      translate: 90vw -90vh;
+   }
+   75% {
+      translate: 10vw -90vh;
+   }
+   100% {
+      translate: 10vw -10vh;
+   }
+}
+
+.lysina:hover::before {
+   content: "Здарова! Я поехал";
    font-variation-settings: "wght" 400;
    box-shadow: -2px 2px 5px #000;
 
-   font-size: 20px;
+   font-size: 14px;
    position: absolute;
-   bottom: 50px;
-   left: 50px;
+   bottom: 30px;
+   right: 36px;
    padding: 10px;
-   /* width: 150px;
-   height: 50px; */
    background-color: #fff;
    border-radius: 14px;
    border: 2px solid #000;
