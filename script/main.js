@@ -42,7 +42,7 @@ let heroInfo = {
       "Faceless Void",
       "Nature's Prophet",
       "Grimstroke",
-      "Gyroco",
+      "Gyrocopter",
       "Hoodwink",
       "Huskar",
       "Invoker",
