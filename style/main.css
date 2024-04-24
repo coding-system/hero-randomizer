@@ -23,7 +23,7 @@
    font-variation-settings: "wght" 800;
    /* color: #9e9696; */
    color: #fff;
-   text-shadow: 2px 2px 0 #747474;
+   text-shadow: 2px 2px 0 #3a3a3a;
    mix-blend-mode: difference;
 }
 
@@ -44,7 +44,7 @@
    animation-direction: alternate;
 }
 
-.lysina {
+/* .lysina-image {
    display: none;
    mix-blend-mode: normal;
    position: absolute;
@@ -52,6 +52,14 @@
    left: 242px;
    width: 45px;
    z-index: -1;
+} */
+
+.lysina-image {
+   position: absolute;
+   bottom: -4px;
+   left: -8px;
+   width: 35px;
+   z-index: 777;
 }
 
 @keyframes selected {
@@ -106,13 +114,21 @@
 } */
 
 .last-hero {
-   text-transform: lowercase;
+   text-transform: uppercase;
    letter-spacing: 0.3px;
    font-variation-settings: "wght" 600;
-   font-size: 28px;
+   font-size: 22px;
    color: #fff;
    transition: all 0.2s ease;
    mix-blend-mode: difference;
+}
+
+.last-hero__id {
+   color: #3a3a3a;
+}
+
+.last-hero__name {
+   color: #f5f5f5;
 }
 
 .hero-title {
@@ -142,7 +158,8 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   background-image: url(../images/slark.png);
+   background-image: url(../images/background.jpg);
+   background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
    object-fit: cover;
@@ -357,11 +374,5 @@
       top: 0;
       right: -40px;
       display: none;
-   }
-
-   .lysina {
-      top: -10px;
-      left: 182px;
-      width: 38px;
    }
 }

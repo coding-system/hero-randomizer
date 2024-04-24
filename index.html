@@ -11,17 +11,16 @@
    </head>
    <body>
       <div class="wrapper">
-         <h1 class="main-title">
-            Чё берем?<img
-               src="./images/icons/lysina.png"
-               alt=""
-               class="lysina"
-            />
-         </h1>
+         <a href="https://www.twitch.tv/radika1fa" class="lysina"
+            ><img src="./images/icons/lysina.png" alt="" class="lysina-image" />
+         </a>
+         <h1 class="main-title">Чё берем?</h1>
          <div class="content">
             <div class="hero">
-               <div class="last-hero">roll</div>
-               
+               <div class="last-hero">
+                  <span class="last-hero__id">Ну нажми</span>
+                  <span class="last-hero__name">кнопку блять</span>
+               </div>
 
                <div class="hero-image">
                   <!-- <h2 class="hero-title">Наведи, <br>чтобы <br>посмотреть</h2> -->
@@ -43,15 +42,19 @@
          </div>
          <dialog id="dialog-id" class="dialog">
             <form method="dialog" class="dialog__message">
-               <p class="dialog__text">Здесь будет дополинтельный функционал<br></p>
-               <p class="dialog__text__special">А пока его тут нет, не тыкай на кнопку лишний раз<br></p>
+               <p class="dialog__text">
+                  Здесь будет дополинтельный функционал<br />
+               </p>
+               <p class="dialog__text__special">
+                  А пока его тут нет, не тыкай на кнопку лишний раз<br />
+               </p>
             </form>
             <button
                class="button dialog__button"
                type="button"
                onclick="window['dialog-id'].close()"
             >
-            😢
+               😢
             </button>
          </dialog>
          <div class="footer">
