@@ -56,7 +56,7 @@
    content: "Здарова!";
    font-variation-settings: "wght" 400;
    box-shadow: -2px 2px 5px #000;
-   
+
    font-size: 20px;
    position: absolute;
    bottom: 50px;
@@ -104,7 +104,7 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   gap: 5px;
+   gap: 8px;
    width: 355px;
    position: relative;
    border-radius: 14px;
@@ -144,7 +144,6 @@
 
 .last-hero__id {
    color: #3a3a3a;
-
 }
 
 .last-hero__name {
@@ -376,12 +375,17 @@
 }
 
 .powered {
-   font-family: "Inter-Variable";
-   font-variation-settings: "wght" 300;
-   font-size: 12px;
    position: absolute;
    bottom: 5px;
    right: 5px;
+   pointer-events: none;
+}
+
+.powered__text {
+   font-family: "Inter-Variable";
+   font-variation-settings: "wght" 300;
+   font-size: 12px;
+   
 }
 
 @media (524px >= width) {
