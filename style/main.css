@@ -44,96 +44,6 @@
    animation-direction: alternate;
 }
 
-.lysina {
-   display: none;
-   background-image: url("../images/icons/lysina.png");
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   /* background-color: #fff; */
-   /* display: none; */
-   position: absolute;
-   bottom: 0px;
-   left: 0px;
-   z-index: 777;
-   width: 40px;
-   height: 50px;
-}
-
-.lysina {
-   animation-name: lysinarunning;
-   animation-duration: 8s;
-   animation-iteration-count: infinite;
-   animation-timing-function: linear;
-   animation-direction: normal;
-}
-
-@keyframes lysinarunning {
-   0% {
-      translate: 20vw -20vh;
-      scale: 2;
-      rotate: 320deg;
-   }
-   25% {
-      translate: 80vw -20vh;
-      scale: 2;
-      rotate: 720deg;
-   }
-
-   50% {
-      translate: 80vw -80vh;
-      scale: 0.5;
-      rotate: 1440deg;
-   }
-   75% {
-      translate: 20vw -80vh;
-      scale: 0.5;
-      rotate: 2880deg;
-   }
-   100% {
-      translate: 20vw -20vh;
-      scale: 2;
-      rotate: 5720deg;
-   }
-}
-
-.lysina:hover::before {
-   content: "Здарова! Я поехал";
-   font-variation-settings: "wght" 400;
-   box-shadow: -2px 2px 5px #000;
-
-   font-size: 12px;
-   position: absolute;
-   bottom: 30px;
-   right: 36px;
-   padding: 5px;
-   background-color: #fff;
-   border-radius: 14px;
-   border: 2px solid #000;
-}
-
-.lysina-image {
-   width: 35px;
-}
-
-.lysina-image::before {
-   position: absolute;
-   content: "sdfsdfsdfsdf";
-   height: 100px;
-   width: 100px;
-   background-color: #fff;
-}
-
-@keyframes selected {
-   0% {
-      scale: 1;
-   }
-
-   100% {
-      scale: 1.05;
-   }
-}
-
 .content {
    display: flex;
    flex-direction: column;
@@ -448,7 +358,12 @@
    }
 }
 
+.rocket-button {
+
+}
+
 .moon {
+   filter: drop-shadow(-3px 1px 2px rgb(255, 175, 2));
    background-image: url("../images/icons/moon.png");
    background-position: center;
    background-repeat: no-repeat;
@@ -456,15 +371,69 @@
    /* background-color: #fff; */
    /* display: none; */
    position: absolute;
-   top: 3vh;
-   right: 6vw;
+   top: 4vh;
+   right: 7.3vw;
    z-index: 777;
    width: 40px;
    height: 50px;
 }
 
-.raketa {
-   background-image: url("../images/icons/raketa.png");
+.rocket {
+   pointer-events: n;
+   opacity: 0;
+   background-image: url("../images/icons/launch.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   /* background-color: #fff; */
+   /* display: none; */
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   z-index: 777;
+   width: 40px;
+   height: 50px;
+}
+
+.rocket-go {
+   animation-name: rocket-go;
+   animation-duration: 7s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease-out;
+   animation-direction: normal;
+   /* animation-delay: 1s; */
+}
+
+@keyframes rocket-go {
+   0% {
+      filter: drop-shadow(5px 8px 0px rgb(255, 175, 2));
+      opacity: 1;
+      translate: 0 0;
+      scale: 0;
+      rotate: 58deg;
+   }
+
+   30% {
+      scale: 6;
+   }
+
+   50% {
+      scale: 6;
+   }
+
+
+   100% {
+      filter: drop-shadow(2.5px 4px 2px rgb(255, 175, 2));
+      opacity: 1;
+      translate: 90vw -90vh;
+      scale: 0;
+      rotate: 58deg; /*92 для animated*/
+   }
+}
+
+.lysina {
+   display: none;
+   background-image: url("../images/icons/lysina.png");
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -478,71 +447,76 @@
    height: 50px;
 }
 
-.raketa {
+.lysina {
    animation-name: lysinarunning;
-   animation-duration: 7s;
-   animation-iteration-count: 1;
+   animation-duration: 8s;
+   animation-iteration-count: infinite;
    animation-timing-function: linear;
    animation-direction: normal;
-   /* animation-delay: 1s; */
 }
-
-/* @keyframes lysinarunning {
-   0% {
-      translate: 20vw -20vh;
-      scale: 2;
-      rotate: -45deg;
-
-   }
-   25% {
-      rotate: -45deg;
-   }
-
-   35% {
-      rotate: 0deg;
-   }
-
-   50% {
-      translate: 20vw -50vh;
-      scale: 4;
-      rotate: 385deg;
-
-   }
-
-   65% {
-      scale: 3;
-   }
-   75% {
-      scale: 2;
-      rotate: 385deg;
-
-   }
-
-   100% {
-      translate: 90vw -90vh;
-      scale: 0;
-      rotate: 375deg;
-   }
-} */
 
 @keyframes lysinarunning {
    0% {
-      translate: 0 0;
+      translate: 20vw -20vh;
       scale: 2;
-      rotate: 12deg;
+      rotate: 320deg;
+   }
+   25% {
+      translate: 80vw -20vh;
+      scale: 2;
+      rotate: 720deg;
    }
 
-   30% {
-      scale: 4;
+   50% {
+      translate: 80vw -80vh;
+      scale: 0.5;
+      rotate: 1440deg;
    }
+   75% {
+      translate: 20vw -80vh;
+      scale: 0.5;
+      rotate: 2880deg;
+   }
+   100% {
+      translate: 20vw -20vh;
+      scale: 2;
+      rotate: 5720deg;
+   }
+}
 
-   60% {
-      scale: 3;
+.lysina:hover::before {
+   content: "Здарова! Я поехал";
+   font-variation-settings: "wght" 400;
+   box-shadow: -2px 2px 5px #000;
+
+   font-size: 12px;
+   position: absolute;
+   bottom: 30px;
+   right: 36px;
+   padding: 5px;
+   background-color: #fff;
+   border-radius: 14px;
+   border: 2px solid #000;
+}
+
+.lysina-image {
+   width: 35px;
+}
+
+.lysina-image::before {
+   position: absolute;
+   content: "sdfsdfsdfsdf";
+   height: 100px;
+   width: 100px;
+   background-color: #fff;
+}
+
+@keyframes selected {
+   0% {
+      scale: 1;
    }
 
    100% {
-      translate: 90vw -90vh;
-      scale: 0;
-      rotate: 12deg;
+      scale: 1.05;
    }
 }

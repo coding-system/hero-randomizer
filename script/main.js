@@ -274,6 +274,8 @@ let heroButton = document.querySelector(".choose-button");
 let heroImage = document.querySelector(".hero-image");
 let lastHeroId = document.querySelector(".last-hero__id");
 let lastHeroName = document.querySelector(".last-hero__name");
+let rocketButton = document.querySelector(".rocket-button");
+let rocketGo = document.querySelector(".rocket");
 
 heroButton.addEventListener("click", heroesRandom);
 
@@ -305,6 +307,12 @@ function heroesRandom() {
          " -"
    );
    console.log(back);
+}
+
+rocketButton.addEventListener("click", rocketToMoon);
+
+function rocketToMoon() {
+   rocketGo.classList.toggle("rocket-go");
 }
 
 console.log(heroInfo.id[0]);
