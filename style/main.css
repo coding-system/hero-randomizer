@@ -393,12 +393,17 @@
    }
 
    .last-hero {
-      font-size: 52px;
+      font-size: 46px;
    }
 
    .button {
       height: 85px;
       font-size: 45px;
+      border-radius: 22px;
+   }
+
+   .hero-image {
+      border-radius: 22px;
    }
 
    .moon {
