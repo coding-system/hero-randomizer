@@ -62,7 +62,7 @@ let heroInfo = {
       "Magnus",
       "Marci",
       "Mars",
-      "Medusa.",
+      "Medusa",
       "Meepo",
       "Mirana",
       "Monkey King",
@@ -276,6 +276,7 @@ let lastHeroId = document.querySelector(".last-hero__id");
 let lastHeroName = document.querySelector(".last-hero__name");
 let rocketButton = document.querySelector(".rocket-button");
 let rocketGo = document.querySelector(".rocket");
+let lysina = document.querySelector(".lysina");
 
 heroButton.addEventListener("click", heroesRandom);
 
@@ -306,12 +307,16 @@ function heroesRandom() {
          randId +
          " -"
    );
+   if (back >= 50) {
+      lysina.setAttribute(`style`, `display: block`);
+   }
    console.log(back);
 }
 
 rocketButton.addEventListener("click", rocketToMoon);
 
 function rocketToMoon() {
+   rocketGo.classList.remove("rocket-go");
    rocketGo.classList.toggle("rocket-go");
 }
 
