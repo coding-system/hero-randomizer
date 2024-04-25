@@ -426,7 +426,7 @@
    position: absolute;
    top: 4vh;
    right: 7.3vw;
-   z-index: 777;
+   z-index: 776;
    width: 40px;
    height: 50px;
 }
@@ -463,7 +463,7 @@
       opacity: 1;
       translate: 0 0;
       scale: 0;
-      rotate: 58deg;
+      rotate: 60deg;
    }
 
    30% {
@@ -479,7 +479,7 @@
       opacity: 1;
       translate: 90vw -90vh;
       scale: 0;
-      rotate: 58deg; /*92 для animated*/
+      rotate: 60deg; /*92 для animated*/
    }
 }
 
