@@ -126,7 +126,7 @@ let heroInfo = {
       "Windranger",
       "Winter Wyvern",
       "IO",
-      "Witch_doctor",
+      "Witch Doctor",
       "Zeus",
    ],
    image: [
