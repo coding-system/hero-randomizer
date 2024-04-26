@@ -316,7 +316,6 @@ function heroesRandom() {
 rocketButton.addEventListener("click", rocketToMoon);
 
 function rocketToMoon() {
-   rocketGo.classList.remove("rocket-go");
    rocketGo.classList.toggle("rocket-go");
 }
 
