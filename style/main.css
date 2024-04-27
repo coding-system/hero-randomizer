@@ -356,7 +356,7 @@
 }
 
 .rocket {
-   pointer-events: n;
+   pointer-events: none;
    opacity: 0;
    background-image: url("../images/icons/launch.png");
    background-position: center;
@@ -398,11 +398,11 @@
    animation-duration: 8s;
    animation-iteration-count: infinite;
    animation-timing-function: linear;
-   animation-direction: normal;
+   animation-direction: alternate;
 }
 
 .lysina:hover::before {
-   content: "Здарова! Я поехал";
+   content: "Дарова!";
    font-variation-settings: "wght" 400;
    box-shadow: -2px 2px 5px #000;
 
@@ -444,14 +444,14 @@
       opacity: 1;
       translate: 0 0;
       scale: 0;
-      rotate: 60deg;
+      rotate: 58deg;
    }
 
    30% {
       scale: 6;
    }
 
-   50% {
+   40% {
       scale: 6;
    }
 
@@ -460,7 +460,7 @@
       opacity: 1;
       translate: 90vw -90vh;
       scale: 0;
-      rotate: 60deg; /*92 для animated*/
+      rotate: 58deg; /* 92 для animated */
    }
 }
 
