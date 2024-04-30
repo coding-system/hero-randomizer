@@ -314,5 +314,3 @@ function rocketToMoon() {
 }
 
 console.log(heroInfo.id[0]);
-
-// The end
