@@ -22,7 +22,6 @@
    justify-content: center;
    align-items: center;
    gap: 5rem;
-   /* mix-blend-mode: difference; */
 }
 
 .main-title {
@@ -33,15 +32,6 @@
    text-shadow: -0.4rem 0.4rem 0 #3a3a3a;
    mix-blend-mode: difference;
 }
-
-/* .main-title::before {
-   position: absolute;
-   content: "version 0.1";
-   font-size: 16px;
-   text-shadow: 1px 1px 0 #fff;
-   top: -2px;
-   right: -75px;
-} */
 
 .main-title {
    animation-name: selected;
@@ -70,28 +60,6 @@
    position: relative;
    border-radius: var(--border-radius-default);
 }
-
-/* .markers::before {
-   content: "1";
-   font-family: "Trajanpro";
-   position: absolute;
-   top: 5px;
-   left: 10px;
-   color: #fff;
-   opacity: 0;
-   transition: all 0.1s ease;
-}
-
-.markers::after {
-   content: "Abaddon";
-   font-family: "Trajanpro";
-   position: absolute;
-   top: 5px;
-   right: 10px;
-   color: #fff;
-   opacity: 0;
-   transition: all 0.1s ease;
-} */
 
 .last-hero {
    text-transform: uppercase;
@@ -122,7 +90,7 @@
    align-items: center;
    justify-content: center;
    background-color: #000;
-   background-image: url(../images/heroes/monkey_king.jpg);
+   background-image: url(../images/background.jpg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -146,60 +114,6 @@
    border: 0.2rem solid #ffffff;
    opacity: 1;
    cursor: default;
-}
-
-.hero-image::before {
-   display: none; /* Если захочется добавить картинку поверх героев */
-   transition: all 0.2s ease;
-   position: absolute;
-   content: "";
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   border-radius: var(--border-radius-default);
-   background-image: repeating-linear-gradient(
-         90deg,
-         #353535,
-         #353535 5px,
-         transparent 5px,
-         transparent 10px
-      ),
-      repeating-linear-gradient(
-         0deg,
-         #222222,
-         #222222 5px,
-         transparent 5px,
-         transparent 10px
-      ),
-      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: auto;
-   z-index: 2;
-   opacity: 1;
-}
-
-.hero-id {
-   display: none;
-   color: #fff;
-   position: absolute;
-   top: 5px;
-   left: 10px;
-}
-
-.hero-name {
-   display: none;
-   color: #fff;
-   position: absolute;
-   top: 12px;
-   opacity: 0.5;
-   background-color: #000;
-   width: 100%;
-   height: 50px;
-   text-align: end;
-   margin: 0 auto;
-   padding: 0 10px;
 }
 
 /* .content:has(.hero-image:hover) .markers::after {
@@ -315,18 +229,34 @@
 
 .powered {
    position: absolute;
-   bottom: 5px;
-   right: 5px;
-   pointer-events: none;
+   bottom: 0.7rem;
+   right: 0.7rem;
+   /* pointer-events: none; */
 }
 
 .powered__text {
+   color: #ffffff;
    font-family: "Inter-Variable";
    font-variation-settings: "wght" 300;
-   font-size: 12px;
+   font-size: 1.2rem;
+   transition: 0.1s ease;
+   mix-blend-mode: difference;
+}
+
+.powered__text:hover {
+   color: #646464;
+}
+
+.powered__link {
+   text-decoration: none;
+}
+
+.powered__title {
+   font-variation-settings: "wght" 550;
 }
 
 .moon {
+   pointer-events: none;
    filter: drop-shadow(-3px 1px 2px rgb(255, 175, 2));
    background-image: url("../images/icons/moon.png");
    background-position: center;
