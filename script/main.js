@@ -69,7 +69,7 @@ let heroInfo = {
       "Morphling",
       "Muerta",
       "Naga Siren",
-      "Necrophos",
+      "Necrolyte",
       "Shadow Fiend",
       "Night Stalker",
       "Nyx",
@@ -93,7 +93,7 @@ let heroInfo = {
       "Sand King",
       "Shadow Demon",
       "Shadow Shaman",
-      "Timbersaw",
+      "Shredder",
       "Silencer",
       "Wraith king",
       "Skywrath Mage",
@@ -283,9 +283,6 @@ heroButton.addEventListener("click", heroesRandom);
 function heroesRandom() {
    randId = Math.ceil(Math.random() * heroesQuantity);
    back = back + 1;
-   if (randId !== 0) {
-      heroButton.textContent = "Еще раз";
-   }
    if (back === 25) {
       alert(
          "Поздравляем, вы нажали на кнопку целых 30 раз 🎉 Это большое достижение. Столько нажатий не все могут сделать. Мало кто может это сделать. Поэтому получите награду!"

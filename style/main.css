@@ -1,3 +1,10 @@
+:root {
+   --width-default: 26vw;
+   --border-radius-default: 1.6rem;
+   font-size: 0.5vw;
+   /*  10px ~ 0.52083333vw (1920x1080) */
+}
+
 ::selection {
    background-color: #fff;
    color: #000;
@@ -5,25 +12,25 @@
 }
 
 .wrapper {
+   margin: 0 auto;
    background-image: linear-gradient(#20202e, #bbbbbb);
    height: 100vh;
    font-family: "Inter-Variable";
-   font-size: 34px;
    font-variation-settings: "wght" 400;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   gap: 30px;
+   gap: 5rem;
    /* mix-blend-mode: difference; */
 }
 
 .main-title {
-   font-size: 85px;
+   font-size: 11rem;
    font-variation-settings: "wght" 800;
    /* color: #9e9696; */
    color: #fff;
-   text-shadow: 2px 2px 0 #3a3a3a;
+   text-shadow: -0.4rem 0.4rem 0 #3a3a3a;
    mix-blend-mode: difference;
 }
 
@@ -49,18 +56,19 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   width: 355px;
+   width: var(--width-default);
+   gap: 3rem;
 }
 
-.hero {
+.hero-bar {
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   gap: 8px;
-   width: 355px;
+   gap: 1rem;
+   width: 100%;
    position: relative;
-   border-radius: 14px;
+   border-radius: var(--border-radius-default);
 }
 
 /* .markers::before {
@@ -87,12 +95,18 @@
 
 .last-hero {
    text-transform: uppercase;
-   letter-spacing: 0.3px;
+   letter-spacing: 0.05em;
    font-variation-settings: "wght" 600;
-   font-size: 22px;
+   font-size: 3.16rem;
    color: #fff;
    transition: all 0.2s ease;
    mix-blend-mode: difference;
+}
+
+.content:has(.hero-image:hover) .last-hero {
+   scale: 0.6;
+   translate: 0 50px;
+   /* opacity: 0; */
 }
 
 .last-hero__id {
@@ -103,50 +117,35 @@
    color: #f5f5f5;
 }
 
-.hero-title {
-   font-family: "Inter-Variable";
-   font-weight: 400;
-   font-size: 46px;
-   font-variation-settings: "wght" 600;
-   text-align: center;
-   color: #fff;
-   text-transform: uppercase;
-   transition: all 0.1s ease;
-   position: absolute;
-   z-index: 5;
-   pointer-events: none;
-   mix-blend-mode: difference;
-}
-
-.hero-title {
-   /* animation-name: selected; */
-   animation-duration: 0.7s;
-   animation-iteration-count: infinite;
-   animation-timing-function: ease-in-out;
-   animation-direction: alternate;
-}
-
 .hero-image {
    display: flex;
    align-items: center;
    justify-content: center;
    background-color: #000;
-   background-image: url(../images/background.jpg);
+   background-image: url(../images/heroes/monkey_king.jpg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
    object-fit: cover;
    object-position: center;
    width: 100%;
-   height: 190px;
-   border-radius: 14px;
-   border: 2px solid #000000;
+   height: calc(var(--width-default) / 1.75);
+   border-radius: var(--border-radius-default);
+   border: 0.3rem solid #000000;
    transition: all 0.5s ease;
    text-transform: uppercase;
    font-size: 28px;
    position: relative;
    z-index: 1;
    /* opacity: 0; */
+}
+
+.hero-image:hover {
+   scale: 1.1;
+   filter: grayscale(0);
+   border: 0.2rem solid #ffffff;
+   opacity: 1;
+   cursor: default;
 }
 
 .hero-image::before {
@@ -158,7 +157,7 @@
    left: 0;
    width: 100%;
    height: 100%;
-   border-radius: 12px;
+   border-radius: var(--border-radius-default);
    background-image: repeating-linear-gradient(
          90deg,
          #353535,
@@ -203,14 +202,6 @@
    padding: 0 10px;
 }
 
-.hero-image:hover {
-   scale: 1.1;
-   filter: grayscale(0);
-   border: 2px solid #ffffff;
-   opacity: 1;
-   cursor: default;
-}
-
 /* .content:has(.hero-image:hover) .markers::after {
    opacity: 0.5;
 }
@@ -219,33 +210,28 @@
    opacity: 0.5;
 } */
 
-.content:has(.hero-image:hover) .hero-title {
-   scale: 0.6;
-   opacity: 0;
-}
-
-.content:has(.hero-image:hover) .last-hero {
-   scale: 0.6;
-   translate: 0 50px;
-   /* opacity: 0; */
-}
-
 .content:has(.hero-image:hover) .hero-image::before {
    opacity: 0;
+}
+
+.buttons-bar {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+   width: 100%;
 }
 
 .button {
    text-transform: uppercase;
    position: relative;
-   margin-top: 20px;
    font-weight: 400;
    background-color: transparent;
    color: #000;
-   border: 2px solid #000;
-   border-radius: 14px;
-   height: 55px;
+   border: 0.3rem solid #000;
+   border-radius: var(--border-radius-default);
+   height: 6rem;
    width: 100%;
-   font-size: 30px;
+   font-size: 3.5rem;
    /* mix-blend-mode: difference; */
    scale: 1;
    transition: all 0.15s ease;
@@ -274,7 +260,7 @@
 
 .dialog {
    max-width: 490px;
-   border-radius: 14px;
+   border-radius: var(--border-radius-default);
    border: 4px #000 solid;
    display: flex;
    flex-direction: column;
@@ -412,7 +398,7 @@
    right: 36px;
    padding: 5px;
    background-color: #fff;
-   border-radius: 14px;
+   border-radius: var(--border-radius-default);
    border: 2px solid #000;
 }
 
@@ -495,18 +481,11 @@
 
 /* Media */
 
-@media (524px >= width) {
-   .main-title {
-      font-size: 65px;
-   }
+/* @media only screen {
+   
+} */
 
-   .main-title::before {
-      font-size: 8px;
-      top: 0;
-      right: -40px;
-      display: none;
-   }
-
+@media (640px >= width) {
    .lysina {
       display: none;
    }
@@ -524,44 +503,38 @@
    }
 }
 
-@media (2560px <= width) {
-   .main-title {
-      font-size: 155px;
+@media (960px <= width < 1280px) {
+   :root {
+      --width-default: 49.92rem;
+      --border-radius-default: 1.6rem;
+      font-size: 0.8vw;
    }
+}
 
-   .lysina {
-      display: none;
+@media (640px <= width < 960px) {
+   :root {
+      --width-default: 49.92rem;
+      --border-radius-default: 1.6rem;
+      font-size: 0.9vw;
    }
+}
 
-   .content {
-      width: 665px;
+@media (480px <= width < 640px) {
+   :root {
+      --width-default: 49.92rem;
+      --border-radius-default: 1.6rem;
+      font-size: 1.3vw;
    }
+}
 
-   .hero {
-      width: 665px;
+@media (480px > width) {
+   :root {
+      --width-default: 49.92rem;
+      --border-radius-default: 1.6rem;
+      font-size: 1.55vw;
    }
-
-   .hero-image {
-      width: 100%;
-      height: 420px;
-   }
-
-   .last-hero {
-      font-size: 46px;
-   }
-
    .button {
-      height: 85px;
-      font-size: 45px;
-      border-radius: 22px;
-   }
-
-   .hero-image {
-      border-radius: 22px;
-   }
-
-   .moon {
-      scale: 3;
-      translate: 0 20px;
+      font-size: 5.25rem;
+      height: 9rem;
    }
 }
