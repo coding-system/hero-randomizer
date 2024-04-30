@@ -314,3 +314,5 @@ function rocketToMoon() {
 }
 
 console.log(heroInfo.id[0]);
+
+// ase
