@@ -1,0 +1,165 @@
+.dialog {
+   padding: 1rem;
+   width: 80vw;
+   border-radius: var(--border-radius-default);
+   border: 4px #000 solid;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   justify-content: space-between;
+   transition: 0.3s ease;
+   opacity: 1;
+   scale: 1;
+   z-index: 1;
+}
+
+.dialog::backdrop {
+   background-color: #383838;
+   opacity: 0.75;
+}
+
+.dialog:not([open]) {
+   pointer-events: none;
+   padding: 0;
+   border: 0;
+   gap: 0;
+   opacity: 0;
+   height: 0;
+   width: 0;
+   scale: 0;
+}
+
+.dialog__title {
+   margin: 0 auto;
+   font-size: 3rem;
+   text-align: center;
+   max-width: 90%;
+}
+
+.dialog__button {
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   width: 3rem;
+   height: 3rem;
+   border: 0.3rem solid #000;
+   border-radius: calc(var(--border-radius-default) / 4);
+   background-color: #9aa1ff;
+   transition: 0.2s ease;
+}
+
+.dialog__button:hover {
+   cursor: pointer;
+   background-color: #e67a7a;
+}
+
+.close-icon {
+   width: 100%;
+}
+
+.heroes {
+   margin-top: 1rem;
+   width: 100%;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   gap: 1rem;
+   font-size: 1.7rem;
+   text-transform: uppercase;
+   font-family: "Inter-Variable";
+   font-variation-settings: "wght" 500;
+}
+
+.heroes-grid {
+   align-items: center;
+   justify-content: center;
+   padding: calc(1.7rem * 2.4) 0.4rem 0.4rem;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   grid-template-rows: repeat(auto, 1fr);
+   gap: 0.4rem;
+}
+
+.heroes-str {
+   /* background-color: rgb(243, 142, 142); */
+   position: relative;
+}
+
+.heroes-str::before {
+   content: "Сила";
+   position: absolute;
+   top: 1rem;
+   left: 0.4rem;
+   padding: 0.2rem 1rem;
+   background-color: rgb(243, 142, 142);
+   border-radius: 0.2rem;
+}
+
+.heroes-agil {
+   /* background-color: rgb(171, 243, 142); */
+   position: relative;
+}
+
+.heroes-agil::before {
+   content: "Ловкость";
+   position: absolute;
+   top: 1rem;
+   left: 0.4rem;
+   padding: 0.2rem 1rem;
+   background-color: rgb(171, 243, 142);
+   border-radius: 0.2rem;
+}
+
+.heroes-int {
+   /* background-color: rgb(142, 166, 243); */
+   position: relative;
+}
+
+.heroes-int::before {
+   content: "Интеллект";
+   position: absolute;
+   top: 1rem;
+   left: 0.4rem;
+   padding: 0.2rem 1rem;
+   background-color: rgb(142, 166, 243);
+   border-radius: 0.2rem;
+}
+
+.heroes-uni {
+   /* background-color: rgb(243, 236, 142); */
+   position: relative;
+}
+
+.heroes-uni::before {
+   content: "Универсальные";
+   position: absolute;
+   top: 1rem;
+   left: 0.4rem;
+   padding: 0.2rem 1rem;
+   background-color: rgb(243, 236, 142);
+   border-radius: 0.2rem;
+}
+
+.heroes_image {
+   filter: grayscale(1);
+   justify-self: center;
+   object-fit: cover;
+   object-position: center;
+   font-size: 7rem;
+   width: 100%;
+   cursor: pointer;
+   transition: 0.2s ease;
+}
+
+.heroes_image:hover {
+   scale: 1.2;
+   filter: grayscale(0);
+   z-index: 1;
+}
+
+.hero-selected {
+   filter: grayscale(0);
+}

@@ -1,0 +1,97 @@
+/* Media */
+
+/* @media only screen {
+   
+} */
+
+@media (640px >= width) {
+   .lysina {
+      display: none;
+   }
+
+   .rocket {
+      display: none;
+   }
+
+   .moon {
+      display: none;
+   }
+
+   .rocket-button {
+      display: none;
+   }
+
+   /* .heroes-list__button {
+      display: none;
+   }
+
+   .dialog {
+      display: none;
+   } */
+}
+
+@media (960px <= width < 1280px) {
+   :root {
+      --width-default: 49.92rem;
+      --border-radius-default: 1.6rem;
+      font-size: 0.8vw;
+   }
+
+   .dialog {
+      width: 90vw;
+   }
+
+   .heroes-grid {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+   }
+}
+
+@media (640px <= width < 960px) {
+   :root {
+      --width-default: 49.92rem;
+      --border-radius-default: 1.6rem;
+      font-size: 0.9vw;
+   }
+   .heroes-grid {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+   }
+   .dialog {
+      width: 90vw;
+   }
+}
+
+@media (480px <= width < 640px) {
+   :root {
+      --width-default: 49.92rem;
+      --border-radius-default: 1.6rem;
+      font-size: 1.3vw;
+   }
+   .heroes-grid {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+   }
+   .dialog {
+      width: 100vw;
+   }
+}
+
+@media (480px > width > 1px) {
+   :root {
+      --width-default: 49.92rem;
+      --border-radius-default: 1.6rem;
+      font-size: 1.55vw;
+   }
+   .button {
+      font-size: 5.25rem;
+      height: 9rem;
+   }
+   .heroes-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+   }
+   .dialog {
+      width: 100vw;
+   }
+}
