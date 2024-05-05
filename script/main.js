@@ -3,7 +3,6 @@ let heroesQuantity = 124; //Общее количество героев
 let heroInfo = {
    //Объект с информацией о герое
    name: [
-      "NotAHero",
       "Abaddon",
       "Underlord",
       "Alchemist",
@@ -69,7 +68,7 @@ let heroInfo = {
       "Morphling",
       "Muerta",
       "Naga Siren",
-      "Necrolyte",
+      "Necrophos",
       "Shadow Fiend",
       "Night Stalker",
       "Nyx",
@@ -93,7 +92,7 @@ let heroInfo = {
       "Sand King",
       "Shadow Demon",
       "Shadow Shaman",
-      "Shredder",
+      "Timbersaw",
       "Silencer",
       "Wraith king",
       "Skywrath Mage",
@@ -130,7 +129,6 @@ let heroInfo = {
       "Zeus",
    ],
    image: [
-      "NotAHero",
       "./images/heroes/abaddon.jpg",
       "./images/heroes/abyssal_underlord.jpg",
       "./images/heroes/alchemist.jpg",
@@ -257,7 +255,7 @@ let heroInfo = {
       "./images/heroes/zuus.jpg",
    ],
    id: [
-      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
       21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
       39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
       57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
@@ -281,7 +279,7 @@ let lysina = document.querySelector(".lysina");
 heroButton.addEventListener("click", heroesRandom);
 
 function heroesRandom() {
-   randId = Math.ceil(Math.random() * heroesQuantity);
+   randId = Math.floor(Math.random() * heroesQuantity);
    back = back + 1;
    if (back === 25) {
       alert(
@@ -298,7 +296,7 @@ function heroesRandom() {
       "Ваш герой:    --- " +
          heroInfo.name[randId] +
          " ---     под номером  - " +
-         randId +
+         (randId + 1) +
          " -"
    );
    if (back >= 25) {
