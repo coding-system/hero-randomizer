@@ -297,6 +297,8 @@ function heroesRandom() {
    heroButton.classList.add("choose-button_moved");
    rocketButton.classList.add("rocket-button_moved");
    lastHero.classList.add("last-hero");
+   lastHeroId.classList.add("changed");
+   lastHeroName.classList.add("changed");
    lastHeroId.textContent = heroInfo.id[randId];
    lastHeroName.textContent = `- ${heroInfo.name[randId]}`;
    console.log(
