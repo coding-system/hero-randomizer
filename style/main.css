@@ -62,20 +62,24 @@
 }
 
 .last-hero {
+   color: #fff;
+}
+
+.last-hero_default {
    text-transform: uppercase;
    letter-spacing: 0.05em;
    font-variation-settings: "wght" 600;
    font-size: 3.16rem;
-   color: #fff;
    transition: all 0.2s ease;
    mix-blend-mode: difference;
+   position: relative;
+   z-index: 7;
 }
 
-.content:has(.hero-image:hover) .last-hero {
+/* .content:has(.hero-image:hover) .last-hero {
    scale: 0.6;
    translate: 0 50px;
-   /* opacity: 0; */
-}
+} */
 
 .last-hero__id {
    color: #3a3a3a;
@@ -100,21 +104,22 @@
    height: calc(var(--width-default) / 1.75);
    border-radius: var(--border-radius-default);
    border: 0.3rem solid #000000;
-   transition: all 0.3s ease;
+   transition: all 0.2s ease;
    text-transform: uppercase;
    position: relative;
    z-index: 1;
+   opacity: 0;
 }
 
-.hero-image:hover {
+.hero-image_visible {
+   opacity: 1;
+}
+
+/* .hero-image:hover {
    scale: 1.1;
    border: 0.2rem solid #ffffff;
    cursor: default;
-}
-
-.content:has(.hero-image:hover) .hero-image::before {
-   opacity: 0;
-}
+} */
 
 .buttons-bar {
    display: flex;
@@ -152,6 +157,48 @@
    font-variation-settings: "wght" 800;
    background-color: #fff;
    color: #000;
+}
+
+.choose-button {
+   z-index: 3;
+   translate: 0 -30rem;
+}
+
+.choose-button_moved {
+   translate: 0 0;
+}
+
+.content:has(.choose-button:hover) .hero-image {
+   scale: 1.1;
+   border: 0.2rem solid #ffffff;
+   cursor: default;
+}
+
+.content:has(.choose-button:hover) .last-hero {
+   scale: 1.1;
+   translate: 0 4rem;
+   /* background-color: #ffffff;  */
+   background-color: rgba(255, 255, 255, 0.5);
+   color: rgb(0, 0, 0);
+   mix-blend-mode: difference;
+   border-radius: var(--border-radius-default);
+   padding: 0 2rem;
+}
+
+.content:has(.choose-button:hover) .last-hero__id {
+   color: rgb(0, 0, 0);
+}
+
+.content:has(.choose-button:hover) .last-hero__name {
+   color: rgb(0, 0, 0);
+}
+
+.rocket-button {
+   display: none;
+}
+
+.rocket-button_moved {
+   display: block;
 }
 
 .heroes-list__button {
