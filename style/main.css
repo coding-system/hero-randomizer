@@ -176,13 +176,15 @@
 
 .content:has(.choose-button:hover) .last-hero {
    scale: 1.1;
-   translate: 0 4rem;
+   translate: 0 4.5rem;
    /* background-color: #ffffff;  */
-   background-color: rgba(255, 255, 255, 0.5);
+   background: rgb(255,255,255);
+background: linear-gradient(135deg, rgba(255,255,255,0.32816876750700286) 0%, rgba(255,255,255,0.5494572829131652) 50%, rgba(255,255,255,0.36738445378151263) 100%);
    color: rgb(0, 0, 0);
    mix-blend-mode: difference;
    border-radius: var(--border-radius-default);
-   padding: 0 2rem;
+   padding: 0 1rem;
+   border: 2px solid #fff;
 }
 
 .content:has(.choose-button:hover) .last-hero__id {
