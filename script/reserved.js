@@ -1,5 +1,3 @@
-let heroesQuantity = 124; //Общее количество героев
-
 let heroInfo = {
    //Объект с информацией о герое
    name: [
@@ -7,7 +5,7 @@ let heroInfo = {
       "Underlord",
       "Alchemist",
       "Ancient Apparition",
-      "Antimage",s
+      "Antimage",
       "Arc Warden",
       "Axe",
       "Bane",
@@ -255,16 +253,773 @@ let heroInfo = {
       "./images/heroes/zuus.jpg",
    ],
    id: [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-      21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
-      39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-      57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
-      75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92,
-      93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108,
-      109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123,
-      124, 125,
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+      22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+      40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57,
+      58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75,
+      76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93,
+      94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109,
+      110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124,
+      125,
    ],
 };
+
+let heroesQuantity = 124; //Общее количество героев
+let n = heroesQuantity;
+let chanceDefault = (n / n ** 2) * 100;
+
+const heroes = [
+   {
+      heroesId: 0,
+      heroesName: "NotAHero",
+      heroesImage: "NotAHero",
+      heroesChance: 0,
+   },
+   {
+      heroesId: 1,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 2,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 3,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 4,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 5,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 6,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 7,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 8,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 9,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 10,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 11,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 12,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 13,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 14,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 15,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 16,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 17,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 18,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 19,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 20,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 21,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 22,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 23,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 24,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 25,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 26,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 27,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 28,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 29,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 30,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 31,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 32,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 33,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 34,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 35,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 36,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 37,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 38,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 39,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 40,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 41,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 42,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 43,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 44,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 45,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 46,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 47,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 48,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 49,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 50,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 51,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 52,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 53,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 54,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 55,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 56,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 57,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 58,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 59,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 60,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 61,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 62,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 63,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 64,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 65,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 66,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 67,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 68,
+      heroesName: "anc",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 69,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 70,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 71,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 72,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 73,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 74,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 75,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 76,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 77,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 78,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 79,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 80,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 81,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 82,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 83,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 84,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 85,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 86,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 87,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 88,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 89,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 90,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 91,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 92,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 93,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 94,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 95,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 96,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 97,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 98,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 99,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 100,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 101,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 102,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 103,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 104,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 105,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 106,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 107,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 108,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 109,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 110,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 111,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 112,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 113,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 114,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 115,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 116,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 117,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 118,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 119,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 120,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 121,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 122,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 123,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+   {
+      heroesId: 124,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+   },
+];
 
 let randId = 0;
 let back = 0;
@@ -276,41 +1031,8 @@ let rocketButton = document.querySelector(".rocket-button");
 let rocketGo = document.querySelector(".rocket");
 let lysina = document.querySelector(".lysina");
 
-heroButton.addEventListener("click", heroesRandom);
-
-function heroesRandom() {
-   randId = Math.floor(Math.random() * heroesQuantity);
-   back = back + 1;
-   if (back === 25) {
-      alert(
-         "Поздравляем, вы нажали на кнопку целых 30 раз 🎉 Это большое достижение. Столько нажатий не все могут сделать. Мало кто может это сделать. Поэтому получите награду!"
-      );
-   }
-   heroImage.setAttribute(
-      `style`,
-      `background-image: url('${heroInfo.image[randId]}')`
-   );
-   lastHeroId.textContent = heroInfo.id[randId];
-   lastHeroName.textContent = `- ${heroInfo.name[randId]}`;
-   console.log(
-      "Ваш герой:    --- " +
-         heroInfo.name[randId] +
-         " ---     под номером  - " +
-         (randId + 1) +
-         " -"
-   );
-   if (back >= 25) {
-      lysina.setAttribute(`style`, `display: block`);
-   }
-   console.log(back);
+let summ = 0;
+for (let i = 0; i <= heroes.length; i = i + 1) {
+   summ = summ + heroes[i].heroesChance;
+   console.log(summ);
 }
-
-rocketButton.addEventListener("click", rocketToMoon);
-
-function rocketToMoon() {
-   rocketGo.classList.toggle("rocket-go");
-}
-
-console.log(heroInfo.id[0]);
-
-// ase

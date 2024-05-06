@@ -156,7 +156,6 @@
    border-radius: 0.8em;
 }
 
-
 .heroes_image:hover {
    scale: 1.2;
    filter: grayscale(0);

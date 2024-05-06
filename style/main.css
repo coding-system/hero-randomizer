@@ -104,7 +104,6 @@
    text-transform: uppercase;
    position: relative;
    z-index: 1;
-   /* opacity: 0; */
 }
 
 .hero-image:hover {
@@ -144,11 +143,9 @@
 .button:hover {
    cursor: pointer;
    scale: 1.05;
-   translate: 0 -3px;
    font-variation-settings: "wght" 500;
    background-color: #000000;
    color: #ffffff;
-   /* height: 58px; */
 }
 
 .button:active {
