@@ -66,7 +66,7 @@
    letter-spacing: 0.05em;
    font-variation-settings: "wght" 600;
    font-size: 3.16rem;
-   transition: all 0.2s ease;
+   transition: all 0.15s ease;
    mix-blend-mode: difference;
    position: relative;
    z-index: 7;
@@ -105,7 +105,7 @@
    height: calc(var(--width-default) / 1.75);
    border-radius: var(--border-radius-default);
    border: 0.3rem solid #000000;
-   transition: all 0.2s ease;
+   transition: all 0.15s ease;
    text-transform: uppercase;
    position: relative;
    z-index: 1;
@@ -180,14 +180,35 @@
    translate: 0 4.8rem;
    /* background-color: #ffffff;  */
    background: rgba(255, 255, 255, 0.5);
-   /* background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.5) 100%); */
+   background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.5) 100%
+   );
    border-radius: var(--border-radius-default);
    padding: 0 1rem;
-   border: 2px solid #fff;
+   border: 0.2rem solid #fff;
+}
+
+.content:has(.choose-button:hover) .yes {
+   scale: 1.1;
+   translate: 0 4.8rem;
+   /* background-color: #ffffff;  */
+   background: rgba(255, 255, 255, 0.5);
+   background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.5) 100%
+   );
+   border-radius: var(--border-radius-default);
+   padding: 0 1rem;
+   border: 0.2rem solid #fff;
 }
 
 .content:has(.choose-button:hover) .changed {
-   color: rgb(44, 44, 44);
+   color: rgb(15, 15, 15);
 }
 
 .rocket-button {
@@ -234,7 +255,7 @@
 
 .moon {
    pointer-events: none;
-   filter: drop-shadow(-3px 1px 2px rgb(255, 175, 2));
+   filter: drop-shadow(-0.3rem 0.1rem 0.2rem rgb(255, 175, 2));
    background-image: url("../images/icons/moon.png");
    background-position: center;
    background-repeat: no-repeat;
@@ -244,8 +265,8 @@
    top: 4vh;
    right: 7.3vw;
    z-index: 776;
-   width: 40px;
-   height: 50px;
+   width: 4rem;
+   height: 5rem;
 }
 
 .rocket {
@@ -260,8 +281,8 @@
    bottom: 0px;
    left: 0px;
    z-index: 777;
-   width: 40px;
-   height: 50px;
+   width: 4rem;
+   height: 5rem;
 }
 
 .rocket-go {
@@ -282,8 +303,8 @@
    bottom: 0px;
    left: 0px;
    z-index: 777;
-   width: 40px;
-   height: 50px;
+   width: 4rem;
+   height: 5rem;
 }
 
 .lysina {
@@ -297,16 +318,16 @@
 .lysina:hover::before {
    content: "Дарова!";
    font-variation-settings: "wght" 400;
-   box-shadow: -2px 2px 5px #000;
+   box-shadow: -0.2rem 0.2rem 0.5rem #000;
 
    font-size: 12px;
    position: absolute;
-   bottom: 30px;
-   right: 36px;
-   padding: 5px;
+   bottom: 3rem;
+   right: 3.6rem;
+   padding: 0.5rem;
    background-color: #fff;
    border-radius: var(--border-radius-default);
-   border: 2px solid #000;
+   border: 0.2rem solid #000;
 }
 
 .lysina-image {
@@ -316,8 +337,8 @@
 .lysina-image::before {
    position: absolute;
    content: "sdfsdfsdfsdf";
-   height: 100px;
-   width: 100px;
+   height: 10rem;
+   width: 10rem;
    background-color: #fff;
 }
 

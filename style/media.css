@@ -4,6 +4,12 @@
    
 } */
 
+@media (480px >= width) {
+   .last-hero {
+      display: none;
+   }
+}
+
 @media (640px >= width) {
    .lysina {
       display: none;
