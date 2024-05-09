@@ -1,5 +1,3 @@
-let heroesQuantity = 124; //Общее количество героев
-
 let heroInfo = {
    //Объект с информацией о герое
    name: [
@@ -266,20 +264,100 @@ let heroInfo = {
    ],
 };
 
+let heroesQuantity = 124; //Общее количество героев
+// let heroesQuantity = 10; //Общее количество героев
+let n = heroesQuantity;
+let chanceDefault = (n / n ** 2) * 100;
+
+let heroes = [
+   {
+      heroesId: 1,
+      heroesName: "Abaddon",
+      heroesImage: "./images/heroes/abaddon.jpg",
+      heroesChance: chanceDefault,
+      selectedStatus: true,
+   },
+   {
+      heroesId: 2,
+      heroesName: "Underlord",
+      heroesImage: "./images/heroes/abyssal_underlord.jpg",
+      heroesChance: chanceDefault,
+      selectedStatus: true,
+   },
+   {
+      heroesId: 3,
+      heroesName: "Alchemist",
+      heroesImage: "./images/heroes/alchemist.jpg",
+      heroesChance: chanceDefault,
+      selectedStatus: true,
+   },
+   {
+      heroesId: 4,
+      heroesName: "Ancient Apparition",
+      heroesImage: "./images/heroes/ancient_apparition.jpg",
+      heroesChance: chanceDefault,
+      selectedStatus: true,
+   },
+   {
+      heroesId: 5,
+      heroesName: "Antimage",
+      heroesImage: "./images/heroes/antimage.jpg",
+      heroesChance: chanceDefault,
+      selectedStatus: true,
+   },
+   {
+      heroesId: 6,
+      heroesName: "Arc Warden",
+      heroesImage: "./images/heroes/arc_warden.jpg",
+      heroesChance: chanceDefault,
+      selectedStatus: true,
+   },
+   {
+      heroesId: 7,
+      heroesName: "Axe",
+      heroesImage: "./images/heroes/axe.jpg",
+      heroesChance: chanceDefault,
+      selectedStatus: true,
+   },
+   {
+      heroesId: 8,
+      heroesName: "Bane",
+      heroesImage: "./images/heroes/bane.jpg",
+      heroesChance: chanceDefault,
+      selectedStatus: true,
+   },
+   {
+      heroesId: 9,
+      heroesName: "Batrider",
+      heroesImage: "./images/heroes/batrider.jpg",
+      heroesChance: chanceDefault,
+      selectedStatus: true,
+   },
+   {
+      heroesId: 10,
+      heroesName: "Beastmaster",
+      heroesImage: "./images/heroes/beastmaster.jpg",
+      heroesChance: chanceDefault,
+      selectedStatus: true,
+   },
+];
+
 let randId = 0;
 let back = 0;
 let heroButton = document.querySelector(".choose-button");
 let heroImage = document.querySelector(".hero-image");
-let lastHero = document.querySelector(".last-hero");
+let lastHero = document.querySelector(".last-hero_default");
 let lastHeroId = document.querySelector(".last-hero__id");
 let lastHeroName = document.querySelector(".last-hero__name");
 let rocketButton = document.querySelector(".rocket-button");
+let heroesListButton = document.querySelector(".heroes-list__button");
 let rocketGo = document.querySelector(".rocket");
 let lysina = document.querySelector(".lysina");
 
-lastHero.classList.remove("last-hero");
+// lastHero.classList.remove("last-hero");
 heroButton.addEventListener("click", heroesRandom);
 
+// Выбор героя через рандом и изменение стилей
 function heroesRandom() {
    randId = Math.floor(Math.random() * heroesQuantity);
    back = back + 1;
@@ -296,7 +374,9 @@ function heroesRandom() {
    heroImage.classList.add("hero-image_visible");
    heroButton.classList.add("choose-button_moved");
    rocketButton.classList.add("rocket-button_moved");
+   heroesListButton.classList.add("heroes-list__button_moved");
    lastHero.classList.add("last-hero");
+   lastHero.classList.remove("last-hero-animation");
    lastHeroId.classList.add("changed");
    lastHeroName.classList.add("changed");
    lastHeroId.textContent = heroInfo.id[randId];
@@ -318,5 +398,3 @@ function rocketToMoon() {
 }
 
 console.log(heroInfo.id[0]);
-
-// ase
