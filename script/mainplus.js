@@ -276,7 +276,7 @@ let lastHeroName = document.querySelector(".last-hero__name");
 let rocketButton = document.querySelector(".rocket-button");
 let heroesListButton = document.querySelector(".heroes-list__button");
 let rocketGo = document.querySelector(".rocket");
-let lysina = document.querySelector(".lysina");
+let headFly = document.querySelector(".headfly");
 
 // lastHero.classList.remove("last-hero");
 heroButton.addEventListener("click", heroesRandom);
@@ -289,7 +289,7 @@ function heroesRandom() {
       alert(
          "Поздравляем, вы нажали на кнопку целых 30 раз 🎉 Это большое достижение. Столько нажатий не все могут сделать. Мало кто может это сделать. Поэтому получите награду!"
       );
-      lysina.setAttribute(`style`, `display: block`);
+      headFly.setAttribute(`style`, `display: block`);
    }
    heroImage.setAttribute(
       `style`,

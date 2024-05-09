@@ -297,55 +297,6 @@
    animation-direction: normal;
 }
 
-.lysina {
-   display: none;
-   background-image: url("../images/icons/lysina.png");
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   position: absolute;
-   bottom: 0px;
-   left: 0px;
-   z-index: 777;
-   width: 4rem;
-   height: 5rem;
-}
-
-.lysina {
-   animation-name: lysinarunning;
-   animation-duration: 8s;
-   animation-iteration-count: infinite;
-   animation-timing-function: linear;
-   animation-direction: alternate;
-}
-
-.lysina:hover::before {
-   content: "Дарова!";
-   font-variation-settings: "wght" 400;
-   box-shadow: -0.2rem 0.2rem 0.5rem #000;
-
-   font-size: 12px;
-   position: absolute;
-   bottom: 3rem;
-   right: 3.6rem;
-   padding: 0.5rem;
-   background-color: #fff;
-   border-radius: var(--border-radius-default);
-   border: 0.2rem solid #000;
-}
-
-.lysina-image {
-   width: 35px;
-}
-
-.lysina-image::before {
-   position: absolute;
-   content: "sdfsdfsdfsdf";
-   height: 10rem;
-   width: 10rem;
-   background-color: #fff;
-}
-
 @keyframes pulsation {
    0% {
       scale: 1;
@@ -397,34 +348,5 @@
       translate: 90vw -90vh;
       scale: 0;
       rotate: 58deg; /* 92 для animated */
-   }
-}
-
-@keyframes lysinarunning {
-   0% {
-      translate: 20vw -20vh;
-      scale: 2;
-      rotate: 320deg;
-   }
-   25% {
-      translate: 80vw -20vh;
-      scale: 2;
-      rotate: 720deg;
-   }
-
-   50% {
-      translate: 80vw -80vh;
-      scale: 0.5;
-      rotate: 1440deg;
-   }
-   75% {
-      translate: 20vw -80vh;
-      scale: 0.5;
-      rotate: 2880deg;
-   }
-   100% {
-      translate: 20vw -20vh;
-      scale: 2;
-      rotate: 5720deg;
    }
 }

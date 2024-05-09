@@ -1,0 +1,118 @@
+:root {
+   --fix-width: 10rem;
+   --fix-height: 10rem;
+}
+
+.headfly {
+   display: none;
+   background-image: url("../images/icons/lysina.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: var(--fix-width);
+   height: var(--fix-height);
+   border-radius: 50%;
+   border: 0.3rem solid #111;
+   overflow: hidden;
+   background-color: #1f4c8f;
+   box-shadow: inset 15px 15px 15px rgba(0, 0, 0, 0.4),
+      -15px -5px 20px rgba(0, 0, 0, 0.6);
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 778;
+   -webkit-animation: moveX 5.05s linear 0s infinite alternate,
+      moveY 4.4s linear 0s infinite alternate;
+   -moz-animation: moveX 5.05s linear 0s infinite alternate,
+      moveY 4.4s linear 0s infinite alternate;
+   -o-animation: moveX 5.05s linear 0s infinite alternate,
+      moveY 4.4s linear 0s infinite alternate;
+   animation: moveX 5.05s linear 0s infinite alternate,
+      moveY 4.4s linear 0s infinite alternate;
+}
+
+/* .headfly:hover::before {
+   content: "Дарова!";
+   font-variation-settings: "wght" 400;
+   box-shadow: -0.2rem 0.2rem 0.5rem #000;
+   font-size: 12px;
+   position: absolute;
+   bottom: 3rem;
+   right: 3.6rem;
+   padding: 0.5rem;
+   background-color: #fff;
+   border-radius: var(--border-radius-default);
+   border: 0.2rem solid #000;
+   z-index: 779;
+} */
+
+@-webkit-keyframes moveX {
+   from {
+      left: 0;
+   }
+   to {
+      left: calc(100vw - (var(--fix-width)));
+   }
+}
+@-moz-keyframes moveX {
+   from {
+      left: 0;
+   }
+   to {
+      left: calc(100vw - (var(--fix-width)));
+   }
+}
+@-o-keyframes moveX {
+   from {
+      left: 0;
+   }
+   to {
+      left: calc(100vw - (var(--fix-width)));
+   }
+}
+@keyframes moveX {
+   from {
+      left: 0;
+   }
+   to {
+      left: calc(100vw - (var(--fix-width)));
+   }
+}
+@-webkit-keyframes moveY {
+   from {
+      top: 0;
+   }
+   to {
+      top: calc(100vh - (var(--fix-height)));
+   }
+}
+@-moz-keyframes moveY {
+   from {
+      top: 0;
+   }
+   to {
+      top: calc(100vh - (var(--fix-height)));
+   }
+}
+@-o-keyframes moveY {
+   from {
+      top: 0;
+   }
+   to {
+      top: calc(100vh - (var(--fix-height)));
+   }
+}
+@keyframes moveY {
+   from {
+      top: 0;
+   }
+   to {
+      top: calc(100vh - (var(--fix-height)));
+   }
+}
+
+/* 
+   height: calc(100vh - (var(--fix-height)));
+   width: calc(100vw - (var(--fix-width))); 
+   
+   */
