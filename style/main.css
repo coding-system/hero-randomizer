@@ -3,6 +3,7 @@
    --border-radius-default: 1.6rem;
    font-size: 0.5vw;
    /*  10px ~ 0.52083333vw (1920x1080) */
+   --main-font: "Inter-Variable", sans-serif;
 }
 
 ::selection {
@@ -15,7 +16,7 @@
    margin: 0 auto;
    background-image: linear-gradient(#20202e, #bbbbbb);
    height: 100vh;
-   font-family: "Inter-Variable";
+   font-family: var(--main-font);
    font-variation-settings: "wght" 400;
    display: flex;
    flex-direction: column;
@@ -236,7 +237,7 @@
 .powered__text {
    /* color: #646464; */
    color: #3a3a3a;
-   font-family: "Inter-Variable";
+   font-family: var(--main-font);
    font-variation-settings: "wght" 300;
    font-size: 1.2rem;
    transition: 0.2s ease;
