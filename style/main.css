@@ -216,6 +216,17 @@
    transform: translateY(0);
 }
 
+.headfly-button {
+   opacity: 0;
+   transition: 0.2s ease;
+   transform: translateY(-28rem);
+}
+
+.headfly-button_moved {
+   opacity: 1;
+   transform: translateY(0);
+}
+
 .heroes-list__button {
    opacity: 0;
    transition: 0.2s ease;

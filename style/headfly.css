@@ -5,6 +5,7 @@
 
 .headfly {
    display: none;
+   /* opacity: 0; */
    background-image: url("../images/icons/lysina.png");
    background-position: center;
    background-repeat: no-repeat;
@@ -29,6 +30,10 @@
       moveY 4.4s linear 0s infinite alternate;
    animation: moveX 5.05s linear 0s infinite alternate,
       moveY 4.4s linear 0s infinite alternate;
+}
+
+.headfly_visible {
+   opacity: 1;
 }
 
 /* .headfly:hover::before {

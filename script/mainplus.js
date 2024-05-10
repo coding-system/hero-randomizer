@@ -274,6 +274,7 @@ let lastHero = document.querySelector(".last-hero_default");
 let lastHeroId = document.querySelector(".last-hero__id");
 let lastHeroName = document.querySelector(".last-hero__name");
 let rocketButton = document.querySelector(".rocket-button");
+let headFlyButton = document.querySelector(".headfly-button");
 let heroesListButton = document.querySelector(".heroes-list__button");
 let rocketGo = document.querySelector(".rocket");
 let headFly = document.querySelector(".headfly");
@@ -285,9 +286,9 @@ heroButton.addEventListener("click", heroesRandom);
 function heroesRandom() {
    randId = Math.floor(Math.random() * heroesQuantity);
    back = back + 1;
-   if (back === 30) {
+   if (back === 10) {
       alert(
-         "Поздравляем, вы нажали на кнопку целых 30 раз 🎉 Это большое достижение. Столько нажатий не все могут сделать. Мало кто может это сделать. Поэтому получите награду!"
+         "Поздравляем, вы нажали на кнопку целых 10 раз 🎉 Это большое достижение. Столько нажатий не все могут сделать. Мало кто может это сделать. Поэтому получите награду!"
       );
       headFly.setAttribute(`style`, `display: block`);
    }
@@ -298,6 +299,7 @@ function heroesRandom() {
    heroImage.classList.add("hero-image_visible");
    heroButton.classList.add("choose-button_moved");
    rocketButton.classList.add("rocket-button_moved");
+   // headFlyButton.classList.add("headfly-button_moved");
    // heroesListButton.classList.add("heroes-list__button_moved");
    lastHero.classList.add("last-hero");
    lastHero.classList.remove("last-hero-animation");
@@ -316,10 +318,14 @@ function heroesRandom() {
 }
 
 rocketButton.addEventListener("click", rocketToMoon);
-
 function rocketToMoon() {
    rocketGo.classList.toggle("rocket-go");
 }
+
+// headFlyButton.addEventListener("click", runHeadFly)
+// function runHeadFly() {
+//    headFly.classList.toggle("headfly_visible");
+// }
 
 console.log(heroInfo.id[0]);
 
